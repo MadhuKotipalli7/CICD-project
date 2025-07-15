@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: formfilling-regapp
+  labels:
+     app: regapplication              # should match with service selector
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: regapplication
+  template:
+    metadata:
+      labels:
+        app: regapplication
+    spec:
+      containers:
+      - name: regapplication
+        image: madhukotipalli7/demotomcat
+        imagePullPolicy: Always         # Always pull latest image from docker hub
+        ports:
+        - containerPort: 8080           # container port to access website
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1      # Strategy section is all about make sure update only one pod at a time.
+
