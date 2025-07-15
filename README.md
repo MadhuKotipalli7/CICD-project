@@ -65,32 +65,11 @@
 - Gained hands-on experience with provisioning, scripting, and debugging.
 - Understood production-level deployment and automation strategies.
 
----
-
-## 📸 Screenshots & Architecture Diagram
-
-> (Add screenshots of Jenkins pipelines, Docker images, K8s dashboard, and Route 53 DNS here.)
-
----
-
-## 🌐 Live Access
-
-> (Add your Route 53-based domain name or public IP here if accessible)
-
----
-
 ## 🤝 Connect with Me
 
 If you're interested in DevOps, CI/CD, or want to collaborate on similar cloud-native projects, feel free to connect!
 
-**LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-
----
-
-## 📁 Folder Structure (Optional)
-
-
----
+**LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/madhu-kumar-kotipalli/)
 
 ## 🏁 Conclusion
 
