@@ -1,0 +1,20 @@
+---
+- hosts: dockerhost
+  
+  tasks:
+    
+  - name: stop existing container
+    command: docker stop tomcatwebapplication
+    ignore_errors: yes
+
+  - name: remove stopped container
+    command: docker rm tomcatwebapplication
+    ignore_errors: yes
+
+  - name: remove existing image
+    command: docker rmi madhukotipalli7/demotomcat:latest
+    ignore_errors: yes
+
+  - name: create a new container
+    command: docker run -itd --name tomcatwebapplication -p 8083:8080 madhukotipalli7/demotomcat:latest
+

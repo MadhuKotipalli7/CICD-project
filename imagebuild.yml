@@ -1,0 +1,17 @@
+---
+- hosts: ansible
+  tasks:
+  - name: create docker image
+    command: docker build -t demotomcat:latest .
+    args:
+      chdir: /opt/docker
+
+
+  - name: create tag
+    command: docker tag demotomcat:latest madhukotipalli7/demotomcat:latest
+
+  - name: push image to docker hub
+    command: docker push madhukotipalli7/demotomcat:latest
+
+
+
